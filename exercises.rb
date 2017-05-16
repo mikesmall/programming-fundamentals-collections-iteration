@@ -109,8 +109,13 @@ puts "Total population of cities is #{sum}."
 #     Martha is old.
 #     Stewart is young.
 #     Holly is young.
-
-
+family.each do |name,age|
+  if age < 40
+      puts "#{name} is young."
+    else
+      puts "#{name} is old."
+  end
+end
 # Print out the last two colours in your array of favourite colours.
 puts "Last two colours are #{fave_colours_strings[-2]} and #{fave_colours_strings[-1]}."
 # Increase by 1 the age of everyone in your array of ages. Print it out.
