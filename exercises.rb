@@ -1,7 +1,7 @@
 # EXERCISE 0
 # Arrays
 fave_colours_strings = ["red", "green", "blue"]
-brothers_ages = [36, 33]
+family_ages = [70, 61, 38, 36, 33]
 coin_flips = ["heads", "heads", "tails", "tails", "tails"]
 fave_artists = ["Spinal Tap", "Anvil", "Orion"]
 fave_colours_symbols = [:red, :green, :blue]
@@ -32,9 +32,9 @@ puts coin_flips
 # Print out the first element of the array of your favourite colours.
 puts fave_colours_strings[1] #task 2
 # Output the sorted version of the array of your friends and family members' ages.
-puts brothers_ages.sort
+puts family_ages.sort
 # Add a new baby (0 years old) to the array of your family's ages.
-brothers_ages << 0
+family_ages << 0
 # Using the hash of movie information, access and print the year of one of the movies.
 puts movies[:Jaws]
 
@@ -57,3 +57,26 @@ puts "The population of Toronto is #{cities[:Toronto]}."
 fave_artists.each do |artist|
   puts "I think #{artist} had a fun documentary!"
 end
+
+# EXERCISE 3
+# Print out the first two performing artists in that array.
+puts fave_artists[1,2]
+# For each of your favourite movies, print out a sentence about when the movie was released. For example:
+#     Avatar came out in 2009.
+#     Mean Girls came out in 2004.
+#     The Matrix came out in 1999.
+movies.each do |title,year|
+  puts "#{title} came out in #{year}."
+end
+# Sort and reverse the array of ages of your family.
+# Save it and print it to the screen.
+# See if you can sort and reverse the array on one line!
+family_ages = family_ages.sort
+family_ages = family_ages.reverse
+puts family_ages
+# Add "Beauty and the Beast" movie to your hash of movies information,
+# but with a twist:
+# the movie was released both in 1991 and in 2017.
+# Print it out.
+movies[:"Beauty and the Beast"] = 1991,2017
+puts movies
