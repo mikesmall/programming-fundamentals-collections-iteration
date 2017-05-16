@@ -80,3 +80,20 @@ puts family_ages
 # Print it out.
 movies[:"Beauty and the Beast"] = 1991,2017
 puts movies
+
+# EXERCISE 4
+# Print out all of the ages of your friends/family that are less than 30 (or any number where some ages will not be printed!).
+sons = family_ages.select { |ages| ages < 40 }
+puts "People under 40 in our family are aged..."
+puts sons
+# Find and output the age of the oldest person in your friends/family array.
+puts "The oldest person in our family is aged..."
+puts family_ages.max
+# Count how many times you flipped 'heads' using the coin flips array.
+puts "The amount of Heads-flips in the coin-toss was #{coin_flips.count("heads")}"
+# You realize one of the performing artists in your list is no longer a favourite. Remove one of them from the array.
+fave_artists.delete("Anvil")
+puts fave_artists
+# Pick a city in your city population hash and change its population.
+cities[:Schreiber] = 123456789
+puts cities
