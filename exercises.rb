@@ -138,7 +138,6 @@ blockbusters = {
   2019 => ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Episode 9"]
 }
 puts blockbusters
-
 # Make a new array that contains each row of the buttons on a phone. Each row should be an array.
     #The rows on a phone are: 1 2 3, 4 5 6, 7 8 9, * 0 #
 telephone = [
@@ -148,9 +147,7 @@ telephone = [
   top_row = [7, 8, 9]
 ]
 puts telephone
-
 #Make a new array that contains information about three countries. Each country should be a hash that has a name, a continent, and whether or not it is an island.
-
 countries = [
   canada = {
     :name => "Canada",
@@ -169,3 +166,37 @@ countries = [
   },
 ]
 puts countries
+
+# EXERCISE 6B
+# Output the message "I will not skateboard in the halls" 20 times.
+puts "I will not skateboard in the halls" *20
+# Create an array consisting of the above message. It should appear in the array 20 times.
+skateboard = ["I will not skateboard in the halls" *20]
+puts skateboard
+# Create an array consisting of the numbers between 1 and 50.
+numbers = *(1..50)
+puts numbers
+# Use an each loop to find the sum of the numbers in the above array.
+sum = 0
+numbers.each do |big_total|
+  sum += big_total
+end
+puts "1 to 50, added up, make #{sum}."
+# Create a new array which has three of each number up to 50.
+#    i.e. [1, 1, 1, 2, 2, 2, 3, 3, 3, ... , 50, 50, 50] and so on, up to 50.
+triple_numbers = numbers * 3
+triple_numbers = triple_numbers.sort
+puts triple_numbers
+# Make a new array out all of the countries from the hash in Exercise 6 that are not islands.
+# Print out both arrays.
+
+non_islands = []
+
+countries.each do |country|
+  if country[:island] == false
+    non_islands << country
+  end
+end
+
+puts "All countries: #{countries}"
+puts "Non-island countries: #{non_islands}"
