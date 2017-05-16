@@ -21,9 +21,12 @@ cities = {
   :Halifax => 403131,
   :Calgary => 1214839
 }
-brothers = {
+family = {
   :Scott => 33,
-  :Shaun => 36
+  :Shaun => 36,
+  :Mike => 38,
+  :Mom => 61,
+  :Dad => 70
 }
 
 # EXERCISE 1
@@ -97,3 +100,24 @@ puts fave_artists
 # Pick a city in your city population hash and change its population.
 cities[:Schreiber] = 123456789
 puts cities
+
+# EXERCISE 5
+# Find the sum total of the population in the hash of cities.
+sum = cities.inject(0) { |sum, tuple| sum += tuple[1] }
+puts "Total population of cities is #{sum}."
+# Using your hash containing the names of your family and friends with their ages, print out one of two messages for each depending on their age. For example:
+#     Martha is old.
+#     Stewart is young.
+#     Holly is young.
+
+
+# Print out the last two colours in your array of favourite colours.
+puts "Last two colours are #{fave_colours_strings[-2]} and #{fave_colours_strings[-1]}."
+# Increase by 1 the age of everyone in your array of ages. Print it out.
+family_ages.each do |new_age|
+  puts "Updated age is #{new_age+1}"
+end
+# Add two new colours to your array of favourite colours.
+fave_colours_strings << "purple"
+fave_colours_strings << "yellow"
+puts fave_colours_strings
